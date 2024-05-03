@@ -3,6 +3,12 @@ import pandas as pd
 import seaborn as sb
 import matplotlib.pyplot as plt
 from prophet import Prophet
+import platform
+import matplotlib.pyplot as plt
+from matplotlib import font_manager, rc
+plt.rcParams['axes.unicode_minus'] = False
+if platform.system() == 'Linux':
+    rc('font', family='NanumGothic')
 
 def run_eda() :
     st.markdown("<h2 style='text-align: center; color: black;'>탐색적 데이터 분석</h2>", unsafe_allow_html=True)

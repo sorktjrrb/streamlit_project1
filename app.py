@@ -4,13 +4,6 @@ from home import run_home
 from eda import run_eda
 from graph import run_graph
 from ml import run_ml
-import platform
-import matplotlib.pyplot as plt
-from matplotlib import font_manager, rc
-plt.rcParams['axes.unicode_minus'] = False
-if platform.system() == 'Linux':
-    rc('font', family='NanumGothic')
-
 
 
 def main():
