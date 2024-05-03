@@ -7,7 +7,7 @@ from prophet import Prophet
 def run_eda() :
     st.markdown("<h2 style='text-align: center; color: black;'>탐색적 데이터 분석</h2>", unsafe_allow_html=True)
 
-    df = pd.read_csv('./data/msft_stock_data.csv')
+    df = pd.read_csv('./data/df_v1.csv')
 
     print(df)
 
@@ -20,11 +20,11 @@ def run_eda() :
     elif choice_radio == radio_menu[1] :
         st.dataframe(df.describe())
 
-    # Date, Open, High, Low, Close, Adj Close, Volume,
+    # '날짜', '시가', '최고가', '최저가', '종가', '마감가', '거래량',
     # 날짜데이터를 prophet로 유의미한걸 보여주고 time값으로 수치화할 예정
 
     st.text('컬럼을 선택하면, 각 컬럼별 최대/최소 데이터를 보여드립니다.')
-    column_list = ['Open','High','Low','Close','Volume']
+    column_list = ['시가', '최고가', '최저가', '종가', '마감가', '거래량']
     choice_column = st.selectbox('컬럼을 선택하세요.', column_list)
 
     st.info(f'선택하신 {choice_column}의 최대 데이터는 다음과 같습니다.')
@@ -36,7 +36,7 @@ def run_eda() :
     st.subheader('상관관계 분석')
     st.text('컬럼을 2개 이상 선택하면, 컬럼간에 상관계수를 보여드립니다.')
     
-    corr_column_list = ['Open','High','Low','Close','Volume']
+    corr_column_list = ['시가', '최고가', '최저가', '종가', '마감가', '거래량']
     selected_columns = st.multiselect('컬럼을 선택하세요.', corr_column_list)
     
     # 2개 이상 선택했을때와 그렇지 않을때로 개발

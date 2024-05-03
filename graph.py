@@ -9,7 +9,7 @@ def run_graph():
     prophet = Prophet()
     df = pd.read_csv('./data/msft_stock_data.csv')
 
-    df_prophet = df[['Date','High']]
+    df_prophet = df[['Date','Adj Close']]
     df_prophet.columns = ['ds', 'y']
     print(df_prophet.columns)
 
@@ -17,13 +17,14 @@ def run_graph():
     future = prophet.make_future_dataframe(periods= 365, freq='B')
 
     st.markdown("<h2 style='text-align: center; color: black;'>Prophet 예측 결과</h2>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center; color: black;'>Prophet을 이용하여 1년후에 주식가격까지 예측해 보았습니다.</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: black;'>Prophet을 이용하여 날짜별로 마감가를 분석하여 1년후에 주식가격까지 예측해 보았습니다.</p>", unsafe_allow_html=True)
 
     forecast = prophet.predict(future)
 
     print(forecast.info())
 
-    st.write(forecast)
+    st.dataframe(forecast)
+    st.info('ds는 날짜별 데이터를 뜻하며 최종 예측한 값은 표의 가장 우측 yhat값을 참고하시면 됩니다.')
 
     st.markdown("<h2 style='text-align: center; color: black;'>Prophet 예측 결과 차트</h2>", unsafe_allow_html=True)
     st.image('./image/prophet1.png', use_column_width=True)
