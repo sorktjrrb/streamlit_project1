@@ -3,12 +3,21 @@ import pandas as pd
 import seaborn as sb
 import matplotlib.pyplot as plt
 from prophet import Prophet
+
 import platform
 import matplotlib.pyplot as plt
 from matplotlib import font_manager, rc
+
+# 리눅스 환경에서 한글 폰트 설정
 plt.rcParams['axes.unicode_minus'] = False
 if platform.system() == 'Linux':
     rc('font', family='NanumGothic')
+# 윈도우 환경에서 한글 폰트 설정
+elif platform.system() == 'Windows':
+    # 한글 폰트 파일 경로 (실제 폴더내에 있는 폰트를 선택해서 수정해서 사용해도됨)
+    font_path = "c:\WINDOWS\Fonts\GULIM.TTC"
+    font_name = font_manager.FontProperties(fname=font_path).get_name()
+    rc('font', family=font_name)
 
 def run_eda() :
     st.markdown("<h2 style='text-align: center; color: black;'>탐색적 데이터 분석</h2>", unsafe_allow_html=True)
