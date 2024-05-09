@@ -20,7 +20,7 @@ elif platform.system() == 'Windows':
     rc('font', family=font_name)
 
 def run_eda() :
-    st.markdown("<h2 style='text-align: center; color: black;'>탐색적 데이터 분석</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; color: black;'>< 탐색적 데이터 분석 ></h2>", unsafe_allow_html=True)
 
     df = pd.read_csv('./data/df_v1.csv')
 
@@ -28,7 +28,7 @@ def run_eda() :
 
     radio_menu = ['데이터프레임', '통계치']
 
-    choice_radio = st.radio('데이터프레임 보기 / 통계치 보기를 할 수 있습니다.', radio_menu)
+    choice_radio = st.radio('**데이터프레임 보기 / 통계치 보기를 할 수 있습니다.**', radio_menu)
 
     if choice_radio == radio_menu[0] :
         st.dataframe(df)
@@ -38,7 +38,7 @@ def run_eda() :
     # '날짜', '시가', '최고가', '최저가', '종가', '마감가', '거래량',
     # 날짜데이터를 prophet로 유의미한걸 보여주고 time값으로 수치화할 예정
 
-    st.text('컬럼을 선택하면, 각 컬럼별 최대/최소 데이터를 보여드립니다.')
+    st.markdown('**컬럼을 선택하면, 각 컬럼별 최대/최소 데이터를 보여드립니다.**')
     column_list = ['시가', '최고가', '최저가', '종가', '마감가', '거래량']
     choice_column = st.selectbox('컬럼을 선택하세요.', column_list)
 
@@ -49,7 +49,7 @@ def run_eda() :
     st.dataframe( df.loc[df[choice_column] == df[choice_column].min(), ])
 
     st.subheader('상관관계 분석')
-    st.text('컬럼을 2개 이상 선택하면, 컬럼간에 상관계수를 보여드립니다.')
+    st.markdown('**컬럼을 2개 이상 선택하면, 컬럼간에 상관계수를 보여드립니다.**')
     
     corr_column_list = ['시가', '최고가', '최저가', '종가', '마감가', '거래량']
     selected_columns = st.multiselect('컬럼을 선택하세요.', corr_column_list)
@@ -68,4 +68,4 @@ def run_eda() :
         st.dataframe(df[selected_columns].corr())
         
     else :
-        st.text('컬럼은 2개 이상 선택하여야 합니다.')
+        st.error('컬럼은 2개 이상 선택하여야 합니다.')

@@ -7,7 +7,7 @@ import datetime
 
 def run_ml():
 
-    st.subheader("주식 가격 예측하기")
+    st.markdown("<h2 style='text-align: center; color: black;'>< 특정 날짜의 가격 예측 ></h2>", unsafe_allow_html=True)
     st.info('Prophet을 통해 예측한 결과 날짜 데이터도 유효한것으로 확인되어 머신러닝에는 time 이라는 변수로 수치화해 일자가 지날수록 데이터값이 1씩 증가하도록하여 학습하였습니다.')
     st.info('날짜값을 확인하신후 수치로 입력후, 시가, 최고가, 최저가, 마감가, 거래량을 예측하여 입력하셔야 합니다. 예측을 원하시는 날짜와 가장 가까운날짜를 기반으로 실제데이터값과 유사하게 예측값을 입력하시는게 좋습니다.')
     st.link_button('이전 주식 데이터 확인',url='https://kr.investing.com/equities/microsoft-corp-historical-data')
@@ -21,7 +21,7 @@ def run_ml():
     df_date['Date'] = df_date['Date'].apply(lambda x: x.date())
 
     # Streamlit 앱 생성
-    st.subheader('Time 값 조회 앱')
+    st.subheader('Time 값 조회')
     st.info('날짜값(time)은 2010-01-04 부터 2025-12-31일까지만 조회가능합니다.')
 
     # 사용자가 날짜를 선택할 수 있는 date picker 추가
@@ -53,7 +53,7 @@ def run_ml():
     st.text('예측되는 거래량을 수치로 입력하세요')
     volume = st.number_input('거래량', min_value=0, max_value=100000000, value=25000000, step=1000000)
 
-    st.subheader('버튼을 누르면 최종 마감 가격을 예측합니다.')
+    st.subheader('버튼을 누르면 최종 주식 마감 가격을 예측합니다.')
 
     if st.button('예측하기') :
 
