@@ -26,20 +26,33 @@
 
 ------
 ## 💻 개발 환경 및 기술 스택
-
 jupyter notebook을 통해, msft_stock_data.csv 파일을 통계 분석하고, Prophet을 통해 주식가격에대한 시계열 예측 분석을 진행 하였습니다.
 
 Prophet 분석 데이터를 통해 시간에 따른 주식 가격 변동에 유의미한점을 확인하였고, 이 데이터까지 포함하여 선형 회귀 (Linear regression) 모델을 개발하고  MicroSoft의 주식 가격을 예측하는 머신러닝을 수행하였습니다.
 
 최종적으로 Streamlit을 이용해서, 통계 분석과 데이터 시각화 및 주식 가격을 예측하는 대시보드 앱을 개발하였고, AWS EC2를 사용하여 서버에 배포하였습니다.
 
-- **데이터 분석 및 시각화** : Jupyter Notebook, pandas, NumPy, Matplotlib
-- **시계열 데이터 분석** : Prophet
-- **머신러닝 모델링** : scikit-learn
-- **웹 애플리케이션 개발** : Streamlit
-- **버전 관리** : Git
-- **편집기** : Visual Studio Code
-- **서버** : AWS EC2
+- **데이터 분석 및 시각화**
+
+<img src="https://img.shields.io/badge/jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=black"><img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"><img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white"><img src="https://img.shields.io/badge/matplotlib-013243?style=for-the-badge&logo=matplotlib&logoColor=white"></br>
+- **시계열 데이터 분석**
+
+<img src="https://img.shields.io/badge/Prophet-E6522C?style=for-the-badge&logo=prometheus&logoColor=white"></br>
+- **머신러닝 모델링**
+
+<img src="https://img.shields.io/badge/scikitlearn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"></br>
+- **웹 애플리케이션 개발**
+
+<img src="https://img.shields.io/badge/streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"></br>
+- **버전 관리**
+
+<img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"></br>
+- **편집기**
+
+<img src="https://img.shields.io/badge/visualstudio-007ACC?style=for-the-badge&logo=visualstudio&logoColor=white"></br>
+- **서버**
+
+<img src="https://img.shields.io/badge/amazonec2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white"></br>
 
 ------
 ## 🧨 트러블 슈팅
@@ -84,7 +97,8 @@ data = {
     selected_date = st.date_input('날짜를 선택하세요', value=pd.to_datetime('2024-12-31'))
     print(type(selected_date))
 ```
-
+------
 ## ✏ 작성자
 - 강석규
 - e-mail : sorktjrrb@naver.com
+------
