@@ -33,26 +33,24 @@ Prophet 분석 데이터를 통해 시간에 따른 주식 가격 변동에 유�
 최종적으로 Streamlit을 이용해서, 통계 분석과 데이터 시각화 및 주식 가격을 예측하는 대시보드 앱을 개발하였고, AWS EC2를 사용하여 서버에 배포하였습니다.
 
 - **데이터 분석 및 시각화**
-
-<img src="https://img.shields.io/badge/jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=black"><img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"><img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white"><img src="https://img.shields.io/badge/matplotlib-013243?style=for-the-badge&logo=matplotlib&logoColor=white"></br>
+<br><img src="https://img.shields.io/badge/jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=black"> &nbsp;<img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/matplotlib-013243?style=for-the-badge&logo=matplotlib&logoColor=white"></br>
 - **시계열 데이터 분석**
+<br><img src="https://img.shields.io/badge/Prophet-E6522C?style=for-the-badge&logo=prometheus&logoColor=white"></br>
 
-<img src="https://img.shields.io/badge/Prophet-E6522C?style=for-the-badge&logo=prometheus&logoColor=white"></br>
 - **머신러닝 모델링**
+<br><img src="https://img.shields.io/badge/scikitlearn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"></br>
 
-<img src="https://img.shields.io/badge/scikitlearn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"></br>
 - **웹 애플리케이션 개발**
+<br><img src="https://img.shields.io/badge/streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"></br>
 
-<img src="https://img.shields.io/badge/streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"></br>
 - **버전 관리**
+<br><img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"></br>
 
-<img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"></br>
 - **편집기**
+<br><img src="https://img.shields.io/badge/visualstudio-007ACC?style=for-the-badge&logo=visualstudio&logoColor=white"></br>
 
-<img src="https://img.shields.io/badge/visualstudio-007ACC?style=for-the-badge&logo=visualstudio&logoColor=white"></br>
 - **서버**
-
-<img src="https://img.shields.io/badge/amazonec2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white"></br>
+<br><img src="https://img.shields.io/badge/amazonec2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white"></br>
 
 ------
 ## 🧨 트러블 슈팅
