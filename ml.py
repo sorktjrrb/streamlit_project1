@@ -32,13 +32,12 @@ def run_ml():
     selected_time = df_date.loc[df_date['Date'] == selected_date, 'time'].values
     if len(selected_time) > 0:
         st.success(f'선택한 날짜의 time 값은 {selected_time[0]} 입니다.')
+        time = st.number_input('선택하신 날짜값(time)이 자동으로 입력됩니다', selected_time[0])
     else:
-        st.error('해당하는 데이터가 없습니다.')
+        st.error('해당하는 데이터가 없습니다. 유요한 기간내에 평일을 기준으로 선택해주세요.')
 
     # 'time','Open','High','Low','Close','Volume' 데이터 입력 순서
 
-    time = st.number_input('날짜값(time) 입력', min_value=1, max_value=10000, value=2500)
-    
     st.text('예측되는 시가를 수치로 입력하세요')
     open = st.number_input('시가', min_value=0, max_value=1000, value=350)
 
