@@ -15,7 +15,7 @@ def run_graph():
 
     prophet.fit(df_prophet)
     
-    st.markdown("<h2 style='text-align: center; color: black;'>< 시간에 따른 가격 예측 ></h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; color: black;'>시간에 따른 가격 예측</h2>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: black;'><strong>원하는 기간을 입력해 주시면 시간에 따른 가격을 예측해 드립니다.</strong></p>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: black;'><strong>예측에는 Prophet 라이브러리를 활용하였습니다.</strong></p>", unsafe_allow_html=True)
     st.warning('기간은 1일 ~ 365일까지 입력 가능 합니다.')

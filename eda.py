@@ -20,7 +20,7 @@ elif platform.system() == 'Windows':
     rc('font', family=font_name)
 
 def run_eda() :
-    st.markdown("<h2 style='text-align: center; color: black;'>< 탐색적 데이터 분석 ></h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; color: black;'>탐색적 데이터 분석</h2>", unsafe_allow_html=True)
 
     df = pd.read_csv('./data/df_v1.csv')
 
@@ -48,8 +48,8 @@ def run_eda() :
     st.info(f'선택하신 {choice_column}의 최소 데이터는 다음과 같습니다.')
     st.dataframe( df.loc[df[choice_column] == df[choice_column].min(), ])
 
-    st.subheader('상관관계 분석')
-    st.markdown('**컬럼을 2개 이상 선택하면, 컬럼간에 상관계수를 보여드립니다.**')
+    st.markdown("<h2 style='text-align: center; color: black;'>상관 관계 분석</h2>", unsafe_allow_html=True)
+    st.markdown('<strong>컬럼을 2개 이상 선택하면, 컬럼간에 상관계수를 보여드립니다.</strong>', unsafe_allow_html=True)
     
     corr_column_list = ['시가', '최고가', '최저가', '종가', '마감가', '거래량']
     selected_columns = st.multiselect('컬럼을 선택하세요.', corr_column_list)

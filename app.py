@@ -39,13 +39,3 @@ def main():
 
 if __name__ == '__main__' :
     main()
-
-# Date 날짜: 주식 데이터의 날짜입니다.
-# Open 시가: 해당 날짜의 주식 시가입니다.
-# High 최고가: 해당 날짜의 주식 최고 가격입니다.
-# Low 최저가: 해당 날짜의 주식 최저 가격입니다.
-# Close 마감: 해당 날짜의 주식 마감 가격입니다.
-# Adj Close	 조정 마감: 배당금 및 주식 분할과 같은 기업 활동을 고려한 해당 날짜의 조정된 주식 마감 가격입니다. (종가)
-# 거래량: 해당 날짜의 주식 거래량, 즉 거래된 주식 수입니다.
-
-# 데이터 출처 : https://www.kaggle.com/datasets/muhammadibrahimqasmi/microsft-dataset?resource=download
