@@ -23,7 +23,7 @@
 ------
 ## 💻 개발 환경 및 기술 스택
 - **데이터 분석과 가공 및 시각화**
-<br><img src="https://img.shields.io/badge/jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=black"> &nbsp;<img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/matplotlib-50C878?style=for-the-badge&logo=matplotlib&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/seaborn-50C878?style=for-the-badge&logo=seaborn&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/joblib-7C3AED?style=for-the-badge&logo=joblib&logoColor=white"></br>
+<br><img src="https://img.shields.io/badge/anaconda-44A833?style=for-the-badge&logo=anaconda&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=black">&nbsp;<img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/matplotlib-50C878?style=for-the-badge&logo=matplotlib&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/seaborn-50C878?style=for-the-badge&logo=seaborn&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/joblib-7C3AED?style=for-the-badge&logo=joblib&logoColor=white"></br>
 
 - **시계열 데이터 분석**
 <br><img src="https://img.shields.io/badge/Prophet-E6522C?style=for-the-badge&logo=prometheus&logoColor=white">
@@ -45,22 +45,22 @@
 
 ------
 ## 🖱 개발 과정
-#### - 데이터 분석과 가공 및 시각화
+ - **데이터 분석과 가공 및 시각화**
 
 > 데이터셋 : <https://www.kaggle.com/datasets/muhammadibrahimqasmi/microsft-dataset?resource=download>
 1) jupyter notebook 개발 환경에서, pandas 라이브러리를 활용하여 데이터셋 파일을 읽어와 통계 분석 및 상관 관계 분석을 진행 하였습니다.
 2) 분석한 데이터를 가지고 Prophet을 진행하였고, 시간에 따른 주식 가격 변동이 유의미하게 적용된다는걸 matplotlib와 seaborn 라이브러리를 통해 시각화하여 명확하게 확인해볼수 있었습니다.
 3) 유의미한게 확인된 날짜 데이터를 'time'라는 컬럼값으로 추가하여 데이터를 가공하였고, 사용자가 직접 계산하지 않고 자동으로 불러올수 있도록 numpy 라이브러리를 사용하여 날짜데이터와 time값을 1년뒤에것까지 새로운 데이터로 생성하였습니다.
 
-#### - 머신러닝 모델링 및 관리
+- **머신러닝 모델링 및 관리**
 1) sklearn 라이브러리의 Linear regression 모델을 개발하고 MicroSoft의 주식 가격을 예측하는 머신러닝을 수행하였습니다.
 2) 완성된 모델은 joblib 라이브러리를 통해 저장하였습니다.
 
-#### - 앱 대시보드 개발
+- **앱 대시보드 개발**
 1) GitHub 에 새로운 repository를 생성하여 Visual Studio Code 통합 개발 환경과 연동해 파일별로 구분하고, 가공된 데이터과 모델을 읽어와 Stremalit 라이브러리를 통해 통계 분석과 데이터 시각화 및 주식 가격을 예측하는 앱 대시보드를 개발하였습니다.
 2) GitHub Desktop을 통해 버전 관리(commit, pull, clone)를 하였고, 중간작업은 vscode를 통해 수정 작업과 보완할점을 개선하였습니다.
 
-#### - 서버 배포 및 자동화
+- **서버 배포 및 자동화**
 1) ASW의 EC2 인스턴스를 Linux OS로 생성하였습니다. Putty 프로토콜을 통해 EC2 Linux 서버에 접속하여 Anaconda 프롬포트 설치 및 가상환경을 생성하여 서버에 배포하였습니다.
 2) GitHub 의 Actions를 생성하여 추후에 수정사항들이 반영될수있도록 최종 자동화까지 진행하였습니다.
 
